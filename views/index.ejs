@@ -4,15 +4,19 @@
 
 <div class="main-box">
     <div class="header">
-        To-Do:
+        <h1>To Do: ( <%- context.length %> )</h1>
     </div>
     <div class="main-content">
-        <% if (context) { %>
-            <%= context %>
+        <% for ( var i =0; i < context.length; i++) { %>
+            <div>
+                <input type="checkbox" id="<%= i %>" >
+                <%= context[i].task %>
+                <button class="delete" type="button">x</button>
+                <button class="edit" type="button">o</button>
+            </div>
         <% } %>
-b;ah b;ahj
     </div>
 </div>
 
-<script type="text/javascript" src="/js/main.js"></script>
+<!-- <script type="text/javascript" src="/js/main.js"></script> -->
 <link href="/css/style.css" rel="stylesheet" type="text/css">

@@ -2,5 +2,44 @@
     margin: auto;
     height: 500px;
     width: 500px;
-    background-color: gray;
+    background-color: lightblue;
+}
+
+.first {
+    color: white;
+}
+
+.header {
+    color: white;
+    background: gray;
+    border: 3px solid darkgray;
+    padding-left: 10px;
+}
+
+.main-content div {
+    border: 1px solid gray;
+    padding: 5px 0px 5px 10px;
+    ;
+    
+}
+
+.main-content div:nth-child(odd) {
+    background: white;
+    
+}
+
+.main-content div:nth-child(even) {
+    background: lightgray;
+    border-top: 0px;
+    border-bottom: 0px;
+}
+
+.delete {
+    background: red;
+    float: right;
+}
+
+.edit {
+    background: green;
+    float: right;
 }

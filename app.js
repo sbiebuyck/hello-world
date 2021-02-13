@@ -7,9 +7,15 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.static(__dirname + '/static'));
 
 app.get("/", (req, res) => {
-  var data = {
-    context: "Whatever!"
-  }
+	var data = {
+		context: [
+			{task:"feed cats"},
+			{task:"apartment shop"},
+			{task:"play RuneScape"},
+			{task:"grocery shopping"},
+			{task:"make bed"}
+		]
+	}
   res.render("index", data);
 });
 
