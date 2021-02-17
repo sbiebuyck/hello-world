@@ -7,7 +7,7 @@
         <h1>To Do: ( <%- context.length %> )</h1>
     </div>
     <div class="main-content">
-        <% for ( var i =0; i < context.length; i++) { %>
+        <% for (var i=0; i < context.length; i++) { %>
             <div>
                 <input type="checkbox" id="<%= i %>" >
                 <%= context[i].task %>

@@ -20,8 +20,35 @@ app.get("/", (req, res) => {
 });
 
 app.get("/about", (req, res) => {
-  res.render("about", { title: "Hey", message: "Hello there!" });
+	res.render("about", { title: "Hey", message: "Hello there!" });
 });
+
+app.get("/cssPractice", (req, res) => {
+	var data = {
+		context2: [
+			{task:"A Message From Warren E. Buffett"},
+			{ task: "Annual & Interim Reports",
+			 	subtask: "Updated November 7, 2020"},
+			{task:"Link to SEC Filings"},
+			{task:"Special Letters From Warren & Charlie RE:Past, Present and Future"},
+			{task:"Links to Berkshire Subsidiary Companies"},
+			{task:"Corporate Governance"},
+			{task:"Sustainability"},
+			{task:"Letters from Warren E. Buffett Regarding Pledges to Make Gifts of Berkshire Stock"},
+			{task:"News Releases"},
+			{task:"Annual Meeting Information"},
+			{task:"Proxy Statement - 2020"},
+			{task:"Warren Buffett's Letters to Berkshire Shareholders"},
+			{task:"Charlie Munger's Letters to Wesco Shareholders"},
+			{task:"Celebrating 50 Years of a Profitable Partnership",
+				subtask: "(A commemorative book first sold at the 2015 Annual Meeting and now for sale on eBay.)"},
+			{task:"Comparative Rights and Relative Prices of Class A and B Stock"},
+			{task:"Berkshire Activewear"}
+		]
+	}
+	res.render("cssPractice", data);
+});
+      
 
 app.listen(process.env.port || 3000);
 

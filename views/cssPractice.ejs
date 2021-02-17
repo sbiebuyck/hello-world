@@ -1,0 +1,54 @@
+<div class="main-box">
+	<div class="header">
+	    <h2>BERKSHIRE HATHAWAY INC.</h2>
+        <p>3555 Farnam Street</p>
+        <p>Omaha, NE 68131</p>
+		<p> <strong>Official Home Page</strong></p>
+	</div>
+</div>
+    
+<div class="main-content">
+    <% for (var i=0; i < context2.length; i++) { %>
+        <% if (i === Math.floor( context2.length / 2 )) { %>
+            </ul>
+        <% } %>
+        <% if (i === 0 || i === Math.floor( context2.length / 2 )) { %>
+            
+                <ul class="column">
+            <% } %>
+                    <li class="list">
+                        <%= context2[i].task %>
+                        <% if (context2[i].subtask) { %>
+                            <p>
+                                <%= context2[i].subtask %>
+                            </p>
+                        <% } %>
+                    </li>
+        <% } %>
+                </ul>
+            
+    <!--  <div>
+        <p>
+            <a href="/"> Annual & Interim Reports </a>
+            Updated November 7,2020 
+        </p> 
+    </div>-->
+</div>
+
+<div class="minor-content">
+    <h2>GEICO</h2>
+    <h4>FOR A FREE CAR INSURANCE RATE QUOTE THAT COULD SAVE YOU SUBSTANTIAL MONEY
+        <br>WWW.GEICO.COM OR CALL 1-888-395-6349, 24 HOURS A DAY
+    </h4>
+</div>
+
+<div class="side-note">
+    If you have any comments about our WEB page, you can write us at the address shown above. However, due to limited number of personnel in our corporate office, we are unable to provide a direct response.
+</div>
+
+<div class="footer">
+    Legal Disclaimer
+    <br> Copyright @ 1978-2021 <strong>Berkshire Hathaway Inc.</strong>
+</div>
+
+<link href="/css/style2.css" rel="stylesheet" type="text/css">

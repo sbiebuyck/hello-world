@@ -1,0 +1,35 @@
+.header {
+        color: darkblue;
+        border-bottom: 1px solid black;
+}
+
+.main-content {
+        border-bottom: 1px solid black;
+}
+
+ul {
+        columns: 2;
+        padding-left: 2in;
+        -webkit-columns: 2;
+        -moz-columns: 2;
+}
+
+.column {
+        flex:50%;
+
+}
+
+
+.column .list {
+    padding-bottom: 20px;
+    
+}
+
+
+.minor-content {
+        border-bottom: 1px solid black;
+}
+
+.side-note {
+        border-bottom: 1px solid black;
+}
