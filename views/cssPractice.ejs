@@ -8,37 +8,48 @@
 </div>
     
 <div class="main-content">
-    <% for (var i=0; i < context2.length; i++) { %>
-        <% if (i === Math.floor( context2.length / 2 )) { %>
-            </ul>
-        <% } %>
-        <% if (i === 0 || i === Math.floor( context2.length / 2 )) { %>
-            
-                <ul class="column">
-            <% } %>
-                    <li class="list">
+    <ul class="column">
+        <% var increment = 0; %>
+        <% for (var i=0; i < context2.length; i++) { %>
+            <li class="list">
+                <% if ( context2[i].hyperLink ) { %>
+                    <a href="<%= context2[i].hyperLink %>">
                         <%= context2[i].task %>
-                        <% if (context2[i].subtask) { %>
-                            <p>
-                                <%= context2[i].subtask %>
-                            </p>
-                        <% } %>
-                    </li>
+                    </a>
+                <% } else if (increment ===  0)  { %>
+                    <a href="about">
+                        <%= context2[i].task %>
+                    </a>
+                    <% increment++ %>
+                <% } else if (increment === 1 )  { %>
+                    <a href="other">
+                        <%= context2[i].task %>
+                    </a>
+                    <% increment++ %>
+                <% } else if (increment === 2 )  { %>
+                    <a href="/">
+                        <%= context2[i].task %>
+                    </a>
+                    <% var increment = 0; %>
+                <% } else { %>
+                    <%= context2[i].task %>
+                <% } %>
+
+                <% if (context2[i].subtask) { %>
+                    <p>
+                        <%= context2[i].subtask %>
+                    </p>
+                <% } %>
+            </li>
+
         <% } %>
-                </ul>
-            
-    <!--  <div>
-        <p>
-            <a href="/"> Annual & Interim Reports </a>
-            Updated November 7,2020 
-        </p> 
-    </div>-->
+    </ul>    
 </div>
 
 <div class="minor-content">
     <h2>GEICO</h2>
     <h4>FOR A FREE CAR INSURANCE RATE QUOTE THAT COULD SAVE YOU SUBSTANTIAL MONEY
-        <br>WWW.GEICO.COM OR CALL 1-888-395-6349, 24 HOURS A DAY
+        <br> <a href="/">WWW.GEICO.COM</a> OR CALL 1-888-395-6349, 24 HOURS A DAY
     </h4>
 </div>
 
@@ -47,7 +58,8 @@
 </div>
 
 <div class="footer">
-    Legal Disclaimer
+  <a href="/">Legal Disclaimer</a> 
+    <p></p>
     <br> Copyright @ 1978-2021 <strong>Berkshire Hathaway Inc.</strong>
 </div>
 

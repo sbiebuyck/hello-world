@@ -1,24 +1,22 @@
 .header {
         color: darkblue;
         border-bottom: 1px solid black;
+        text-align: center;
+        line-height: 35%;
+        padding: 5px 0px;;
 }
 
 .main-content {
         border-bottom: 1px solid black;
+        padding-bottom: 75px;
 }
 
 ul {
         columns: 2;
-        padding-left: 2in;
+        padding-left: 150px;
         -webkit-columns: 2;
         -moz-columns: 2;
 }
-
-.column {
-        flex:50%;
-
-}
-
 
 .column .list {
     padding-bottom: 20px;
@@ -28,8 +26,15 @@ ul {
 
 .minor-content {
         border-bottom: 1px solid black;
+        color: darkblue;
+        text-align: center;
 }
 
 .side-note {
         border-bottom: 1px solid black;
+        padding: 15px 0px;
+}
+
+.footer {
+        padding: 20px 0px;
 }

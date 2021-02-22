@@ -26,8 +26,8 @@ app.get("/about", (req, res) => {
 app.get("/cssPractice", (req, res) => {
 	var data = {
 		context2: [
-			{task:"A Message From Warren E. Buffett"},
-			{ task: "Annual & Interim Reports",
+			{task:"A Message From Warren E. Buffett",},
+			{task: "Annual & Interim Reports",
 			 	subtask: "Updated November 7, 2020"},
 			{task:"Link to SEC Filings"},
 			{task:"Special Letters From Warren & Charlie RE:Past, Present and Future"},
@@ -48,7 +48,10 @@ app.get("/cssPractice", (req, res) => {
 	}
 	res.render("cssPractice", data);
 });
-      
+
+app.get("/other", (req, res) => {
+	res.render("other");
+});
 
 app.listen(process.env.port || 3000);
 
