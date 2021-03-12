@@ -42,4 +42,18 @@
 .edit {
     background: green;
     float: right;
+} 
+
+.completed {
+    background: green !important;
+}
+
+.submit-task {
+    position:absolute;
+    bottom: 450px;;
+}
+
+input[type=checkbox]:checked {
+    color:black;
+    text-decoration: line-through;
 }
